@@ -12,11 +12,11 @@ The whole workflow lives in [`health_bot.ipynb`](health_bot.ipynb).
 
 The graph is assembled from small, reusable pieces using four design patterns:
 
-- **Reusable agent wrapper** — `LLMAgent` wraps the chat model (`system + history + user → text`).
-- **Strategy** — each LLM step (summarize / quiz / grade / related) is a `PromptStrategy`;
+- **Reusable agent wrapper** - `LLMAgent` wraps the chat model (`system + history + user → text`).
+- **Strategy** - each LLM step (summarize / quiz / grade / related) is a `PromptStrategy`;
   prompts read `difficulty` from state to scale depth.
-- **Template method** — `Node` defines the call contract; `LLMNode` runs any strategy.
-- **Builder** — `GraphBuilder` fluently registers nodes/edges and compiles the app.
+- **Template method** - `Node` defines the call contract; `LLMNode` runs any strategy.
+- **Builder** - `GraphBuilder` fluently registers nodes/edges and compiles the app.
 
 ```
 ask_topic → ask_difficulty → ask_quiz_count → search → summarize → present_summary
