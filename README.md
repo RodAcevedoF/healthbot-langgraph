@@ -1,6 +1,6 @@
 # HealthBot
 
-An AI-powered patient-education prototype built as a [LangGraph](https://langchain-ai.github.io/langgraph/)
+An AI-powered patient education prototype built as a [LangGraph](https://langchain-ai.github.io/langgraph/)
 workflow. The patient picks a health topic; the bot searches reputable medical sources
 with Tavily, summarizes them in plain language, quizzes the patient, grades the answers
 with citations, suggests related topics, and loops or exits — resetting state between
